@@ -1,0 +1,73 @@
+/* Responsive CSS */
+
+/* Écrans larges (ordinateurs de bureau, 1200px et plus) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+/* Écrans moyens (tablettes, moins de 1200px) */
+@media (max-width: 1199px) {
+    .main-nav ul {
+        gap: 16px;
+    }
+}
+
+/* Écrans moyens (tablettes, moins de 992px) */
+@media (max-width: 991px) {
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .footer-top {
+        gap: 20px;
+    }
+
+    .footer-col {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* Petits écrans (téléphones, moins de 768px) */
+@media (max-width: 767px) {
+    .header-content {
+        padding: 0 8px;
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .help-support {
+        display: none;
+    }
+
+    .footer-col {
+        flex-basis: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .app-links {
+        margin-top: 16px;
+    }
+}
+
+/* Très petits écrans (moins de 576px) */
+@media (max-width: 575px) {
+    .currency-selector {
+        display: none;
+    }
+}

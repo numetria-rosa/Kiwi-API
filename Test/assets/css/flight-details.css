@@ -1,0 +1,494 @@
+/* Styles pour la page de détails de vol */
+
+.flight-details-container {
+    background-color: var(--gray-light);
+    padding: 40px 0;
+    min-height: calc(100vh - var(--header-height));
+}
+
+.flight-details-container .container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 350px);
+    gap: 24px;
+}
+
+/* Barre latérale mobile en mode fixe */
+.flight-booking-summary {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+    height: max-content;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    order: 2;
+}
+
+.booking-summary-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.price-summary {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.price-details {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.btn-book {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* Contenu principal */
+.flight-details-content {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    order: 1;
+}
+
+/* Fil d'Ariane */
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+.breadcrumbs a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumbs .separator {
+    margin: 0 8px;
+}
+
+.breadcrumbs .current {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Titre de la page */
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.flight-dates {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 32px;
+}
+
+/* Sections de vol */
+.flight-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Carte de vol détaillée */
+.flight-card.detailed {
+    background-color: var(--white);
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.flight-header {
+    background-color: var(--gray-light);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.flight-type {
+    font-weight: 500;
+}
+
+.flight-date {
+    color: var(--text-light);
+}
+
+.flight-body {
+    padding: 24px;
+}
+
+.flight-timeline {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.timeline-start,
+.timeline-end {
+    width: 20%;
+}
+
+.timeline-duration {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+.duration-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray-medium);
+    position: absolute;
+    top: 11px; /* Ajuster pour aligner avec le temps */
+}
+
+.duration-text {
+    background-color: var(--white);
+    padding: 0 8px;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.stops-text {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.time {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.airport-code {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.city {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.flight-info {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    border-top: 1px solid var(--gray-medium);
+    padding-top: 24px;
+}
+
+.carrier-logo {
+    width: 48px;
+    height: 48px;
+}
+
+.carrier-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carrier-details {
+    flex: 1;
+}
+
+.carrier-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.flight-number,
+.aircraft-type {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.cabin-class {
+    text-align: right;
+}
+
+.cabin-class .label {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-right: 4px;
+}
+
+.cabin-class .value {
+    font-weight: 500;
+}
+
+/* Options de bagages */
+.baggage-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.baggage-option {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--border-radius-md);
+}
+
+.baggage-type {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.baggage-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.baggage-icon.cabin::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.baggage-icon.checked::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.baggage-name {
+    font-weight: 500;
+}
+
+.baggage-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weight {
+    font-weight: 500;
+}
+
+.price {
+    color: var(--primary-color);
+}
+
+.price.included {
+    color: var(--text-light);
+}
+
+/* Conditions tarifaires */
+.fare-conditions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.fare-condition {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--border-radius-md);
+}
+
+.condition-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.condition-icon.allowed {
+    background-color: #6bc97c; /* Vert pour les options autorisées */
+}
+
+.condition-icon.not-allowed {
+    background-color: #e2574c; /* Rouge pour les options non autorisées */
+}
+
+.condition-icon.refund::before,
+.condition-icon.change::before,
+.condition-icon.seat::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.condition-icon.refund::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M480-120q-33 0-56.5-23.5T400-200v-80h160v80q0 33-23.5 56.5T480-120ZM320-320v-280q0-55 32.5-99T440-755v-25q0-17 11.5-28.5T480-820q17 0 28.5 11.5T520-780v25q55 12 87.5 56t32.5 99v280H320Z'/%3E%3C/svg%3E");
+}
+
+.condition-icon.change::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q75 0 127.5-52.5T860-480q0-75-52.5-127.5T680-660H280q-75 0-127.5 52.5T100-480q0 75 52.5 127.5T280-320Zm400-80q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29ZM480-480Z'/%3E%3C/svg%3E");
+}
+
+.condition-icon.seat::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M80-120v-720h800v720H80Zm80-640h640v-80H160v80Zm0 560h640v-480H160v480Zm0 0v-560 560Z'/%3E%3C/svg%3E");
+}
+
+.condition-details {
+    flex: 1;
+}
+
+.condition-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.condition-value {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* Détail du prix */
+.price-breakdown {
+    background-color: var(--gray-light);
+    border-radius: var(--border-radius-lg);
+    padding: 16px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-item.total {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Bouton de réservation en bas */
+.booking-button-container {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.booking-button-container .btn-book {
+    min-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .flight-details-container .container {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-booking-summary {
+        order: 1;
+        margin-bottom: 24px;
+        position: static;
+    }
+
+    .flight-details-content {
+        order: 2;
+    }
+
+    .booking-button-container {
+        display: none; /* Masquer le bouton de réservation en bas sur mobile puisqu'il est déjà dans la barre latérale */
+    }
+}
+
+@media (max-width: 767px) {
+    .flight-timeline {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .timeline-start,
+    .timeline-end {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .timeline-duration {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .duration-line {
+        display: none;
+    }
+
+    .flight-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .cabin-class {
+        text-align: left;
+    }
+
+    .fare-conditions {
+        grid-template-columns: 1fr;
+    }
+}

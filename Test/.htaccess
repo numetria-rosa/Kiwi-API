@@ -1,0 +1,17 @@
+Options +FollowSymlinks
+Options All -Indexes
+RewriteEngine on
+
+RewriteRule 	^hotel/search/ 				hotel-list.php [L]
+RewriteRule 	^hotel/select/ 				hotel-detail.php [L]
+RewriteRule 	^hotel/confirm/ 			hotel-confirm.php [L]
+
+RewriteRule 	^flight/search/ 			flight-list.php [L]
+RewriteRule 	^flight/confirm/ 			flight-confirm.php [L]
+
+RewriteRule 	^transfers/search/ 			transfers-list.php [L]
+RewriteRule 	^transfers/confirm/ 		transfers-confirm.php [L]
+
+RewriteRule 	^tours/search/ 				tours-list.php [L]
+RewriteRule 	^tours/select/ 				tours-detail.php [L]
+RewriteRule 	^tours/confirm/ 			tours-confirm.php [L]

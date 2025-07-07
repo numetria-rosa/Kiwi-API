@@ -1,0 +1,64 @@
+[
+    2025 - 05 - 07 T15: 22: 36.732039 + 02: 00
+] TokenizeLogger.INFO: RQ - Tokenize Request {
+        "body": {
+            "card": {
+                "number": "5555444444444444",
+                "cvv": "123",
+                "expirationMonth": "01",
+                "expirationYear": "26",
+                "holder": "TEST APPROVE"
+            },
+            "payment": {
+                "order_id": "636744218",
+                "token": "e1a26e16-2b43-11f0-8ed5-772c2d75a2a9",
+                "gate": "pos",
+                "email": "test@kiwi.com"
+            }
+        }
+    }[]
+    [
+        2025 - 05 - 07 T15: 22: 39.993037 + 02: 00
+    ] TokenizeLogger.INFO: RS - Tokenize Response {
+        "response": {
+            "status": "success",
+            "token": "e620d6e8-2b1f-4b95-b55c-7232a255e3e1",
+            "encrypted_cvv": "3aa487b4-b849-4c37-91e6-a8e4e2aa4647",
+            "bin_number": "555544",
+            "last_4_digits": "4444",
+            "holder_name": "TEST APPROVE",
+            "expiration": "2026-01-01",
+            "vendor": "MASTERCARD",
+            "issuer": null,
+            "country_code": "AE",
+            "level": "TITANIUM",
+            "type": "DEBIT",
+            "pass_luhn_validation": false,
+            "risk_assessment": {
+                "correlationId": "2025-05-07T132239987-1c196dfd-v3",
+                "threeDSServerTransID": "a70acb55-732b-44ee-934d-a3906cbf626a",
+                "dsIdentifier": "A000000004",
+                "methodURL": "https://ndm-prev.3dss-non-prod.cloud.netcetera.com/acs/3ds-method",
+                "version": "2.2.0",
+                "status": "success"
+            }
+        }
+    }[]
+
+
+[2025 - 05 - 07 T17: 27: 23.287012 + 02: 00] TokenizeLogger.INFO: Response: { "status": "success", "token": "27697564-8f3d-4889-8ce2-ed2e31d29bf2", "encrypted_cvv": "938e26a7-8111-4393-a9fc-c4aa237d795d", "bin_number": "555544", "last_4_digits": "4444", "holder_name": "TEST APPROVE", "expiration": "2026-01-01", "vendor": "MASTERCARD", "issuer": null, "country_code": "AE", "level": "TITANIUM", "type": "DEBIT", "pass_luhn_validation": false, "risk_assessment": { "correlationId": "2025-05-07T152723360-7c2e7617-v3", "threeDSServerTransID": "fb7ff144-6c8d-4ebc-95ce-35ce3e613eab", "dsIdentifier": "A000000004", "methodURL": "https://ndm-prev.3dss-non-prod.cloud.netcetera.com/acs/3ds-method", "version": "2.2.0", "status": "success" } }[][]
+
+// what i need // 
+"status": "success",
+"token": "27697564-8f3d-4889-8ce2-ed2e31d29bf2",
+"encrypted_cvv": "938e26a7-8111-4393-a9fc-c4aa237d795d",
+"bin_number": "411111",
+"last_4_digits": "1111",
+"holder_name": "TEST APPROVE",
+"expiration": "2026-01-01",
+"vendor": "VISA",
+"issuer": null,
+"country_code": "PL",
+"level": "CLASSIC",
+"type": "DEBIT",
+"pass_luhn_validation": true

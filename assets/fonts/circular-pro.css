@@ -1,0 +1,25 @@
+/* Police Circular Pro */
+
+@font-face {
+    font-family: 'Circular Pro';
+    src: url('circular-pro-book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Pro';
+    src: url('circular-pro-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Pro';
+    src: url('circular-pro-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
