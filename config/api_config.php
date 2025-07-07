@@ -4,7 +4,7 @@
  */
 
 // Configuration de l'API Tequila
-define('TEQUILA_API_KEY', '15C5Z-ZDZJAlqfdlMGRpoFUQ0v09SQyN'); // Remplacer par votre clé API
+define('TEQUILA_API_KEY', 'XXXXXXXXXXXXXXXXXXXXXXXXXX'); // Remplacer par votre clé API
 define('TEQUILA_API_URL', 'https://api.tequila.kiwi.com');
 
 // Endpoints API Tequila
